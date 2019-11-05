@@ -61,5 +61,28 @@ namespace WinformApp.Entities.Services.PartCenter
 
             return worksheet;
         }
+
+        public static ExcelWorksheet CreateShippingWorksheet(this ExcelWorksheet worksheet)
+        {
+            worksheet.Cells[1, 1].Value = "Invoice Number";
+            worksheet.Cells[1, 2].Value = "SKU";
+            worksheet.Cells[1, 3].Value = "Tracking Number";
+            worksheet.Cells[1, 4].Value = "Quantity";
+            worksheet.Cells[1, 5].Value = "DC Code";
+            worksheet.Cells[1, 6].Value = "Date Shipped";
+            worksheet.Cells[1, 7].Value = "Shipping Carrier Code";
+            worksheet.Cells[1, 8].Value = "Shipping Class Code";
+            worksheet.Cells[1, 9].Value = "Shipment Cost";
+            worksheet.Cells[1, 10].Value = "Shipment Tax Cost";
+            worksheet.Cells[1, 11].Value = "Shipment Insurance Cost";
+            worksheet.Cells[1, 12].Value = "Seller Fulfillment ID";
+            worksheet.Cells[1, 13].Value = "PreventSiteProcessing";
+            worksheet.Cells[1, 14].Value = "Fulfillment Cost";
+            worksheet.Cells[1, 15].Value = "Fulfillment Status";
+            worksheet.Cells[1, 16].Value = "Return Tracking Number";
+            worksheet.Cells[1, 17].Value = "";
+
+            return worksheet;
+        }
     }
 }
